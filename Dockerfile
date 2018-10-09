@@ -1,7 +1,10 @@
 FROM ubuntu:14.04
 
-RUN apt-get -y install libevent-dev
-
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y upgrade \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install libevent-dev  \
+    && rm -rf /var/lib/apt/lists/*
+    
 ADD ./etc/* /etc/
 ADD ./bin/* /usr/bin/
 
