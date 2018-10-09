@@ -1,5 +1,5 @@
 ##启动redsocks2
-sed -i "s/SSIP/${SSIP}/g" /etc/redsocks.conf
-sed -i "s/SSPORT/${SSPORT}/g" /etc/redsocks.conf
+sed -i "s/SOCKS5IP/${SOCKS5IP}/g" /etc/redsocks.conf
+sed -i "s/SOCKS5PORT/${SOCKS5PORT}/g" /etc/redsocks.conf
 
 /usr/bin/redsocks2 -c /etc/redsocks.conf
